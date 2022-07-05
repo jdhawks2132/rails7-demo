@@ -7,4 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Post.destroy_all
 
-10.times { |x| Post.create(title: "Post #{x + 1}", body: "This is the content of post #{x + 1}") }
+10.times do |x|
+	Post.create(title: "Post #{x + 1}", body: "This is the content of post #{x + 1}", user_id: User.all.sample.id)
+end

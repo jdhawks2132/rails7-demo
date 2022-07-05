@@ -1,8 +1,13 @@
 <div id="<%= dom_id post %>">
-  <p>
+  <h3>
     <strong>Title:</strong>
     <%= post.title %>
-  </p>
+  </h3>
+
+  <h4>
+    <strong>User:</strong>
+    <%= post.user.email %>
+  </h4>
 
   <h6>
     <%= pluralize(post.views, 'view')%>
